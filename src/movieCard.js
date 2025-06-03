@@ -9,6 +9,8 @@ class MovieCard extends React.Component {
       price: 199,
       ratings: 8.0,
       stars: 0,
+      fav: false,
+      cart: false,
     };
   }
   addStar = () => {
@@ -35,8 +37,24 @@ class MovieCard extends React.Component {
     });
   };
 
+  handleFavourite = () => {
+    this.setState((preState) => {
+      return {
+        fav: !preState.fav,
+      };
+    });
+  };
+
+  handleCart = () => {
+    this.setState((preState) => {
+      return {
+        cart: !preState.cart,
+      };
+    });
+  };
+
   render() {
-    const { title, plot, price, ratings, stars } = this.state;
+    const { title, plot, price, ratings, stars, fav, cart } = this.state;
     return (
       <div className="main">
         <div className="movie-card">
@@ -70,8 +88,16 @@ class MovieCard extends React.Component {
                 />
               </div>
               <div className="buttons">
-                <button className="favourite">Favourite</button>
-                <button className="cart">Add to cart</button>
+                <button
+                  className={fav ? "un-favourite" : "favourite"}
+                  onClick={this.handleFavourite}>
+                  {fav ? "Unfavourite" : "Favourite"}
+                </button>
+                <button
+                  className={cart ? "remove-cart" : "cart"}
+                  onClick={this.handleCart}>
+                  {cart ? "Remove" : "Add to Cart"}
+                </button>
               </div>
             </div>
           </div>
