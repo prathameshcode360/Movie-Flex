@@ -1,9 +1,10 @@
 import MovieList from "./movieList";
+import Navbar from "./navbar";
 
 function App() {
   return (
     <>
-      <h1>Movie-Flex</h1>;
+      <Navbar />
       <MovieList />
     </>
   );
