@@ -150,3 +150,9 @@ h1 {
   top: -5px;
   right: -10px;
 }
+
+.headbtn{
+  width: 100px;
+  height: 100px;
+  color: #fbbf24;
+}
