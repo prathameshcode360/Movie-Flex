@@ -3,15 +3,7 @@ import { Component } from "react";
 class Navbar extends Component {
   render() {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "#1f2937" /* dark gray */,
-          padding: "10px 20px",
-          color: "white",
-        }}>
+      <div style={styles.nav}>
         <div className="title">
           <h2>Movie-flex</h2>
         </div>
@@ -28,3 +20,14 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
+const styles = {
+  nav: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "#1f2937" /* dark gray */,
+    padding: "10px 20px",
+    color: "white",
+  },
+};
