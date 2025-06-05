@@ -1,12 +1,36 @@
 import { Component } from "react";
+import styled from "styled-components";
+
+const Nav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+  padding: 10px 20px;
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+`;
+
+const Title = styled.div`
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    color: ${(props) => props.color};
+
+    &:hover {
+      color: red;
+    }
+    visibility: ${(props) => (props.show ? "visible" : "hidden")};
+  }
+`;
 
 class Navbar extends Component {
   render() {
     return (
-      <div style={styles.nav}>
-        <div className="title">
+      <Nav>
+        <Title color="#fbbf24" show={true}>
           <h2>Movie-flex</h2>
-        </div>
+        </Title>
         <div className="nav-cart">
           <img
             src="https://cdn-icons-png.flaticon.com/128/6131/6131162.png"
@@ -14,20 +38,9 @@ class Navbar extends Component {
           />
           <span>0</span>
         </div>
-      </div>
+      </Nav>
     );
   }
 }
 
 export default Navbar;
-
-const styles = {
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "#1f2937" /* dark gray */,
-    padding: "10px 20px",
-    color: "white",
-  },
-};
