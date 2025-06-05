@@ -26,6 +26,7 @@ const Title = styled.div`
 
 class Navbar extends Component {
   render() {
+    const { cartCount } = this.props;
     return (
       <Nav>
         <Title color="#fbbf24" show={true}>
@@ -36,7 +37,7 @@ class Navbar extends Component {
             src="https://cdn-icons-png.flaticon.com/128/6131/6131162.png"
             alt="image-icon"
           />
-          <span>0</span>
+          <span>{cartCount}</span>
         </div>
       </Nav>
     );
