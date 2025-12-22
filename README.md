@@ -35,3 +35,5 @@ Build a basic movie app using React where:
 - Props are used to display movie data
 
 ---
+
+## Owner - prathameshcode360
