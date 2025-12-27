@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Movie-Flex/static/css/main.fbe86a2d.css",
+    "main.js": "/Movie-Flex/static/js/main.5ca73904.js",
+    "index.html": "/Movie-Flex/index.html",
+    "main.fbe86a2d.css.map": "/Movie-Flex/static/css/main.fbe86a2d.css.map",
+    "main.5ca73904.js.map": "/Movie-Flex/static/js/main.5ca73904.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbe86a2d.css",
+    "static/js/main.5ca73904.js"
+  ]
+}
